@@ -1,6 +1,7 @@
 package com.github.tony84727.archon
 
 import com.github.tony84727.archon.commands.ArrowStormCommand
+import com.github.tony84727.archon.commands.GankCommand
 import net.minecraftforge.common.MinecraftForge
 import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent
@@ -22,6 +23,7 @@ class Archon {
     @Mod.EventHandler
     fun onServerStarting(e: FMLServerStartingEvent) {
         e.registerServerCommand(ArrowStormCommand())
+        e.registerServerCommand(GankCommand())
     }
 
 }
